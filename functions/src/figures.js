@@ -10,5 +10,5 @@ export async function getAllFigures (req, res) {
     const allFigures = await db.collection("figures").get()
     const redoFigures = allFigures.docs
     .map(doc => ({id:doc.id, ...doc.data()}))
-    res.send(redoFigures)
+    res.send(redoFigures)//sends back redone figures
 }
