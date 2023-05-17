@@ -12,7 +12,7 @@ app.use(express.json())
 app.get("/figures", getAllFigures) // get request to /figures, sends req,res to getAllFigures function
 app.post("/figures", createNewFigure)//post request to /figures in the API, that sends req/res to createNewFigure function
 
-export const api = functions.https.onRequest(app)
+export const api = functions.https.onRequest(app)//creates the cloud function
 
 
 

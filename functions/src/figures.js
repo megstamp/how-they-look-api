@@ -1,9 +1,9 @@
 import { db } from "./connectDb.js"
 
 export async function createNewFigure (req,res) {
-    const newFigure = req.body
+    const newFigure = req.body// the body of the request
     await db.collection("figures").add(newFigure)
-    res.status(201).send({message: "figure added."})
+    getAllFigures(req,res)
 }
 
 export async function getAllFigures (req, res) {
